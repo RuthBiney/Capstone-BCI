@@ -33,15 +33,24 @@ This project develops a movement classification system using a hybrid CNN-RNN mo
 
 **USAGE**
 
-1. **_Run all the script in the colab which,_**
+**1. Preprocess the Data**
 
+- Run the preprocessing script to clean and prepare the movement dataset: - python preprocess.py
+  This script:
 - Normalizes the movement data.
 - Handles missing values.
 - Segments data into time windows for training.
-- Loads the preprocessed movement data.
-- Defines and compiles the CNN-RNN hybrid model.
 
-2. **_Start the Flask API for predictions_**
+**2. rain the CNN-RNN Model**
+python train.py
+
+- This script:
+  - Loads the preprocessed movement data.
+  - Defines and compiles the CNN-RNN hybrid model.
+  - Trains the model and saves it to:
+    models/best_movement_classifier.pth
+
+3. **_Start the Flask API for predictions_**
    python flask_api.py
    If Flask is running successfully, you should see;
 
@@ -104,17 +113,18 @@ The CNN-RNN hybrid model consists of:
 1. Local Deployment
    Run the Streamlit app on your local machine:
 
-- streamlit run streamlit_app.py
+   - streamlit run streamlit_app.py
 
 2. Cloud Deployment (Streamlit Sharing or Heroku)
    Option 1: Deploy on Streamlit Cloud
+   - Push the project to GitHub.
+   - Connect the repository to Streamlit Sharing.
 
-- Push the project to GitHub.
-- Connect the repository to Streamlit Sharing.
-  Option 2: Deploy on Heroku
-  heroku create movement-classifier-app
-  git push heroku main
-  heroku open
+Option 2: Deploy on Heroku
+
+    heroku create movement-classifier-app
+    git push heroku main
+    heroku open
 
 **Screenshots**
 Flask API Running
