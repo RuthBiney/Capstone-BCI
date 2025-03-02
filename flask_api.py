@@ -30,7 +30,7 @@ class MovementClassifier(nn.Module):
 
 # Load the trained model
 model = MovementClassifier()
-model.load_state_dict(torch.load("best_movement_classifier.pth"))
+model.load_state_dict(torch.load("movement pth/best_movement_classifier.pth"))
 model.eval()
 
 # Initialize Flask app
