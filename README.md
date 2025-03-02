@@ -127,6 +127,9 @@ Option 2: Deploy on Heroku
     git push heroku main
     heroku open
 
+**Link to Video**
+https://drive.google.com/uc?id=1x6Sok1vC_Kmo8jIa_tDLbAKaMLJpy_UD&export=download
+
 **Screenshots**
 Flask API Running
 
