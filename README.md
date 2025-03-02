@@ -42,7 +42,8 @@ This project develops a movement classification system using a hybrid CNN-RNN mo
 - Segments data into time windows for training.
 
 **2. rain the CNN-RNN Model**
-python train.py
+
+python train_script.py
 
 - This script:
   - Loads the preprocessed movement data.
@@ -56,7 +57,7 @@ python train.py
 
 - Running on http://127.0.0.1:5000
 
-3. **_Test API_**
+4. **_Test API_**
 
 - Option 1: Use Postman
   - Send a POST request to http://127.0.0.1:5000/predict
